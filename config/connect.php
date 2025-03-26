@@ -3,7 +3,7 @@
 <?php 
     
     define('HOST', 'localhost');
-    define('DATABASE', 'crud-php-db');
+    define('DBNAME', 'crud-php-db');
     define('USER', 'root');
     define('PASSWORD', 'root');
 
@@ -20,7 +20,7 @@
         {
             try
             {
-                $this->connection = new PDO('mysql:host='.HOST.';dbname='.DATABASENAME, USER, PASSWORD);
+                $this->connection = new PDO('mysql:host='.HOST.';dbname='.DBNAME, USER, PASSWORD);
             }
             catch (PDOException $e)
             {
@@ -30,5 +30,4 @@
         }
     }
 
-    $testConnection = new Connect();
 ?>
